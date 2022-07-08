@@ -1,13 +1,209 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  padding: 0;
 }
+
+.App {
+  width: 100vw;
+  height: 100vh;
+}
+.App header {
+  width: 100vw;
+  height: 40vh;
+  background-image: url(./Components/images/bg-desktop-light.jpg);
+  transition: all 0.2s ease-in-out;
+  background-size: cover;
+}
+.App header h1 {
+  color: white;
+  letter-spacing: 0.4vw;
+  font-size: 40px;
+  transform: translate(-12vw, 13vh);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  -webkit-margin-before: 0em;
+          margin-block-start: 0em;
+  -webkit-margin-after: 0em;
+          margin-block-end: 0em;
+}
+.App header img {
+  transform: translate(27vw, 7vh);
+  transition: all 0.3s ease-in-out;
+}
+.App header .zin {
+  position: absolute;
+  border: none;
+  border-radius: 5px;
+  top: -14vh;
+  left: 38vw;
+  transform: scale(0.05);
+}
+.App header .zin:hover {
+  opacity: 70%;
+}
+.App header input {
+  width: 30vw;
+  height: 6vh;
+  border: none;
+  border-radius: 4px;
+  transform: translate(-3vw, 15vh);
+  padding-left: 1vw;
+  letter-spacing: 0.3vw;
+}
+.App section {
+  width: 100vw;
+  height: 60vh;
+  max-height: 120vh;
+  background-color: #f7f5f0;
+  transition: all 0.3s ease;
+}
+.App section .image {
+  width: 30vw;
+  background-color: white;
+  border: none;
+  border-radius: 6px;
+  transform: translate(33vw, -3vw);
+}
+.App section .image main ul {
+  position: relative;
+  -webkit-margin-before: 0em;
+          margin-block-start: 0em;
+  -webkit-margin-after: 0em;
+          margin-block-end: 0em;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+.App section .image main ul li {
+  list-style: none;
+  padding-left: 5vw;
+  text-align: left;
+  padding-top: 2vh;
+  font-size: larger;
+  border-bottom: 1px solid black;
+  transition: all 0.1s ease;
+}
+.App section .image main ul li #checker {
+  border: 1px solid grey;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  transform: translate(-4vw, 2vh) scale(0.9);
+  transition: all 0.1s ease;
+}
+.App section .image main ul li span {
+  display: block;
+  position: relative;
+  width: 20vw;
+  top: -1vh;
+  font-size: larger;
+  transition: all 0.1s ease;
+}
+.App section .image main ul li #img {
+  position: absolute;
+  display: none;
+  transform: translate(22vw, -5vh);
+  transition: all 0.1s ease;
+}
+.App section .image main ul li #img:hover {
+  border: 1px solid grey;
+  padding: 3px;
+  border-radius: 5px;
+}
+.App section .image main ul li:hover #img {
+  display: block;
+}
+.App section .image footer {
+  display: flex;
+  flex-direction: row;
+}
+.App section .image footer p {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  font-size: small;
+  margin-top: 1vh;
+  transform: translatey(1vh);
+  margin-left: 4px;
+  color: rgb(102, 100, 96);
+}
+.App section .image footer #come {
+  transform: translate(7vw, 1vh);
+  color: rgb(102, 100, 96);
+  cursor: default;
+}
+.App section .image footer #come:hover {
+  color: pink;
+}
+.App section .image footer ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  transform: translate(2vw, 2vh);
+}
+.App section .image footer ul li {
+  display: inline-block;
+  cursor: default;
+  font-size: small;
+  margin-left: 10px;
+  color: rgb(102, 100, 96);
+}
+.App section .image footer ul #data:hover {
+  color: black;
+}
+.App section .image span {
+  position: relative;
+  top: 5vh;
+  font-size: larger;
+  color: rgb(41, 40, 38);
+}
+
+@media screen and (max-width: 440px) {
+  .App header {
+    height: 25vh;
+    background-image: url(./Components/images/bg-mobile-light.jpg);
+  }
+  .App header h1 {
+    font-size: 30px;
+    font-weight: 300;
+    transform: translate(-30vw, 7vh);
+  }
+  .App header img {
+    transform: translate(80vw, 2vh);
+  }
+  .App header input {
+    width: 85vw;
+    transform: translate(-3vw, 9vh);
+  }
+  .App section {
+    height: 75vh;
+  }
+  .App section .image {
+    width: 85vw;
+    transform: translate(5vw, -3vh);
+  }
+  .App section .image footer ul {
+    transform: translatey(13vh);
+    width: 85vw;
+    border: none;
+    background-color: pink;
+    z-index: 1;
+  }
+  .App section .image footer p {
+    white-space: nowrap;
+  }
+  .App section .image footer #come {
+    transform: translate(-2vw, 1vh);
+  }
+  .App section span {
+    top: 7vh;
+  }
+}/*# sourceMappingURL=index.css.map */
