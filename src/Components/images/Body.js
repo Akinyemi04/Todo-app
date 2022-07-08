@@ -92,6 +92,7 @@ const Body = (props) => {
     function out(e){
         e.target.style.color=props.colorx
     }
+    //many many many people
     if (order === 'All'){
         return (
             <div className='image' style={{backgroundColor:props.background}}>
